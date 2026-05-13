@@ -1,5 +1,15 @@
 # FreeDeepSeekAPI
 
+> **⚠️ Use at your own risk. Read [DISCLAIMER.md](DISCLAIMER.md) before
+> running this.**
+>
+> This project talks to the **undocumented** web API of
+> chat.deepseek.com. Using it **may violate DeepSeek's Terms of Service**
+> and **get your account permanently banned**. The author takes **no
+> responsibility** for banned accounts, blocked IPs, incorrect model
+> output, or any other consequences. The software is provided **AS IS**.
+> Use a throwaway account you don't mind losing.
+
 An **OpenAI-compatible local proxy** in front of
 [chat.deepseek.com](https://chat.deepseek.com). Drops any OpenAI SDK or
 `curl` script straight onto DeepSeek's free web-API — the proxy handles
@@ -243,7 +253,21 @@ MIT (see [LICENSE](LICENSE)). Keeps upstream attribution to
 
 ## Disclaimer
 
-This project is not affiliated with or endorsed by DeepSeek. It uses the
-undocumented web API of chat.deepseek.com; it may break at any time when
-DeepSeek changes its edge or streaming format. Use responsibly and within
-DeepSeek's terms of service.
+**Please read [DISCLAIMER.md](DISCLAIMER.md) before using this project.**
+
+Short version:
+
+- This project uses the **undocumented** web API of chat.deepseek.com
+  and is **not affiliated with DeepSeek**.
+- Using it **may violate DeepSeek's Terms of Service** and **DeepSeek
+  may ban your account** at any time without notice.
+- DeepSeek may change or remove the API at any time, breaking this
+  project without warning.
+- Provided **AS IS**, with **no warranty** and **no liability** for
+  banned accounts, blocked IPs, incorrect output, financial loss, or
+  any other consequences.
+- Use a **throwaway DeepSeek account** you're OK with losing.
+- Do not use this for commercial resale of DeepSeek access, spam,
+  disinformation, or anything illegal in your jurisdiction.
+
+If you run this software, you do so at your own risk.

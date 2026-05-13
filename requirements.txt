@@ -1,0 +1,29 @@
+# Server
+fastapi>=0.110,<1
+uvicorn[standard]>=0.29,<1
+python-dotenv>=1.0,<2
+pydantic>=2.7,<3
+
+# DeepSeek transport — browser impersonation for JA3 / TLS fingerprinting.
+# Pinned: dsk/api.py checks this exact version at runtime (see _REQUIRED_CURL_CFFI).
+curl-cffi==0.8.1b9
+
+# Proof-of-work challenge solver uses a small WASM blob.
+wasmtime>=20,<40
+numpy>=1.26,<3
+
+# Cookie bypass (headless Chrome). These are only needed when you want the
+# bundled refresh_cookies.sh / /admin/refresh-cookies to work on the host
+# where the proxy runs. The Dockerfile installs them unconditionally; you
+# can skip them in lightweight deployments that rely on externally-provided
+# cookies.
+DrissionPage>=4.1,<5
+pyvirtualdisplay>=3,<4
+
+# pkg_resources was dropped in setuptools 81; we use importlib.metadata in
+# our own code now, but the wasmtime package still pulls pkg_resources in
+# some versions. Keep setuptools below 81 for that compatibility window.
+setuptools<81
+
+# HTTP client used inside refresh_cookies.sh to hit the bypass server.
+requests>=2.31,<3

@@ -1,0 +1,42 @@
+# --- Secrets / auth state -------------------------------------------------
+.env
+.env.local
+.env.*.local
+.env.bak
+
+# AWS WAF / Cloudflare clearance cookies — always sensitive.
+dsk/cookies.json
+cookies.json
+
+# --- Python ---------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+.eggs/
+build/
+dist/
+wheels/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+.coverage.*
+htmlcov/
+
+# --- IDEs / tools ---------------------------------------------------------
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# --- Runtime / logs -------------------------------------------------------
+*.log
+logs/
